@@ -22,7 +22,7 @@ class Server {
 
         for (let i = 0; i < files.length; i++) {
             const filename = files[i].replace(".js", "");
-            const routepath = (filename === "index") ? "/api" : `/api/${filename}`;
+            const routepath = (filename === "index") ? "/" : `/${filename}`;
 
             try {
                 this.app.use(routepath, require(`../routes/${filename}`).default);
