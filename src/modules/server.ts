@@ -18,7 +18,7 @@ class Server {
     };
     
     public setRoutes () {
-        const files = fs.readdirSync(`${process.cwd()}/build/routes`);
+        const files = fs.readdirSync(`${process.cwd()}/build/routes`).filter(x => x.endsWith(".js"));
 
         for (let i = 0; i < files.length; i++) {
             const filename = files[i].replace(".js", "");
