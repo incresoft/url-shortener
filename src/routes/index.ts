@@ -1,12 +1,9 @@
 import { Router } from "express";
+import api from "./api";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-    res.json({
-        success: true,
-        message: "Welcome Developer!"
-    });
-});
+router.use("/api", api);
+
 
 export default router;
