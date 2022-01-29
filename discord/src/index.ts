@@ -1,4 +1,4 @@
-import { Client, Collection } from "discord.js";
+import { Client, Collection, GuildMember } from "discord.js";
 import { config } from "dotenv";
 
 config();
@@ -35,6 +35,7 @@ client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
     if (message.channel.type === "DM") return;
+    if (!message.channel.permissionsFor(message.guild?.me as GuildMember).has("SEND_MESSAGES")) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = client.cache.get(`commands-${args.shift()?.toLowerCase()}`);
