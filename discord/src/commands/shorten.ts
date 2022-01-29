@@ -58,8 +58,8 @@ export default {
 
         const Code = ShortId.generate();
         const makeURL = new SchemaURL({
-            _id: message.author.id,
             Redirect: String(url),
+            Author: String(data._id),
             Code
         });
 
