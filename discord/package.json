@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "The Discord bot for the shortener service.",
   "main": "build/index.js",
+  "imports": {
+    "#models/*": "./build/models/*.js"
+  },
   "scripts": {
     "build": "tsc"
   },
@@ -17,8 +20,12 @@
   "dependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/mongoose": "^5.11.97",
+    "@types/shortid": "^0.0.29",
+    "@types/validator": "^13.7.1",
     "discord.js": "^13.6.0",
     "dotenv": "^14.3.2",
-    "mongoose": "^6.1.8"
+    "mongoose": "^6.1.8",
+    "shortid": "^2.2.16",
+    "validator": "^13.7.0"
   }
 }
