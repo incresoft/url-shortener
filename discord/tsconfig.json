@@ -6,7 +6,8 @@
         "pretty": true,
         "esModuleInterop": true,
         "noImplicitAny": false,
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "skipLibCheck": true
     },
     "exclude": [
         "node_modules"
