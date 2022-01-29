@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A web project made in NodeJS that allows you to shorten URL.",
   "main": "build/index.js",
+  "imports": {
+    "#models/*": "./build/models/*.js",
+    "#utils/*": "./build/utils/*.js"
+  },
   "scripts": {
     "build": "tsc"
   },
@@ -18,8 +22,12 @@
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/mongoose": "^5.11.97",
+    "@types/shortid": "^0.0.29",
+    "@types/validator": "^13.7.1",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
-    "mongoose": "^6.1.8"
+    "mongoose": "^6.1.8",
+    "shortid": "^2.2.16",
+    "validator": "^13.7.0"
   }
 }
