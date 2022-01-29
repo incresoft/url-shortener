@@ -1,4 +1,5 @@
 import { Client, Collection, GuildMember } from "discord.js";
+import mongoose from "mongoose";
 import { config } from "dotenv";
 
 config();
@@ -23,6 +24,27 @@ const client = new Discord();
 ["Command"].forEach(dir => {
     require(`./handlers/${dir}`).default(client);
 });
+
+(async () => {
+
+    mongoose.connection.on("open", () => {
+        console.log("Database is connected");
+    });
+
+    mongoose.connection.on("close", () => {
+        console.log("Database is disconnected");
+    });
+
+    if (!mongoose.connections[0].readyState) {
+        await mongoose.connect(process.env.Mongodb as string, {
+            keepAlive: true,
+            connectTimeoutMS: 0,
+            socketTimeoutMS: 0,
+            serverSelectionTimeoutMS: 0
+        });
+    };
+
+})();
 
 client.on("ready", () => {
     console.log("Client is ready");
