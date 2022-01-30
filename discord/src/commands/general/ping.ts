@@ -1,5 +1,5 @@
 import { Message } from "discord.js";
-import { Discord } from "..";
+import { Discord } from "../..";
 
 export default {
     name: "ping",

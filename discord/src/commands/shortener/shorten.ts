@@ -1,5 +1,5 @@
 import { Message } from "discord.js";
-import { Discord } from "..";
+import { Discord } from "../..";
 import Schema from "#models/user";
 import SchemaURL from "#models/url";
 import Validator from "validator";

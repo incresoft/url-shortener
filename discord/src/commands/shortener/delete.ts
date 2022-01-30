@@ -1,5 +1,5 @@
 import { Message, MessageEmbed } from "discord.js";
-import { Discord } from "..";
+import { Discord } from "../..";
 import UserSchema from "#models/user";
 import URLSchema from "#models/url";
 import ShortId from "shortid";

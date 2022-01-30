@@ -1,8 +1,8 @@
 import { Message } from "discord.js";
-import { Discord } from "..";
+import { Discord } from "../..";
 import Schema from "#models/user";
-import createUserId from "../utils/create-userId";
-import { createToken, generatePassword }  from "../utils/create-token";
+import createUserId from "../../utils/create-userId";
+import { createToken, generatePassword }  from "../../utils/create-token";
 
 export default {
     name: "register",
