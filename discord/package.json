@@ -19,11 +19,13 @@
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
+    "@types/glob": "^7.2.0",
     "@types/mongoose": "^5.11.97",
     "@types/shortid": "^0.0.29",
     "@types/validator": "^13.7.1",
     "discord.js": "^13.6.0",
     "dotenv": "^14.3.2",
+    "glob": "^7.2.0",
     "mongoose": "^6.1.8",
     "shortid": "^2.2.16",
     "validator": "^13.7.0"
