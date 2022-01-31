@@ -14,7 +14,7 @@ export default {
             iconURL: client.user?.displayAvatarURL() as string
         })
         .addField("🔗 Shorten", `${prefix}shorten <URL>`, true)
-        .addField("⚙️ Edit", `${prefix}edit <code> <new url>`, true)
+        .addField("⚙️ Edit", `${prefix}edit <code> <new code>`, true)
         .addField("_ _", "_ _", true)
         .addField("🗑️ Delete", `${prefix}delete <code>`, true)
         .addField("📄 URL", `${prefix}url <code> | all`, true)
